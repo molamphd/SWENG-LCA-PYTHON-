@@ -55,9 +55,6 @@ def findLCA(root, n1, n2):
         i += 1
     return path1[i-1] 
   
-  
-# Driver program to test above function 
-# Let's create the Binary Tree shown in above diagram 
 root = Node(1) 
 root.left = Node(2) 
 root.right = Node(3) 
