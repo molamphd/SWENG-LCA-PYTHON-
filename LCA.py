@@ -9,9 +9,9 @@ class Node:
 # Finds the path from root node to given root of the tree. 
 # Stores the path in a list path[], returns true if path  
 # exists, otherwise returns false 
-def findPath( root, path, k): 
+def findPath(root, path, k): 
   
-    # Base Case 
+    # Default Case 
     if root is None: 
         return False
   
