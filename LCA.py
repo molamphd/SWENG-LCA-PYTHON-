@@ -1,4 +1,4 @@
-# A binary tree node 
+# A Binary Tree Node 
 class Node: 
     # Constructor
     def __init__(self, key): 
@@ -7,16 +7,14 @@ class Node:
         self.right = None
   
 # Finds the path from root node to given root of the tree. 
-# Stores the path in a list path[], returns true if path  
-# exists, otherwise returns false 
+# Stores the path in a list path[], returns true if path  exists, otherwise returns false 
 def findPath(root, path, k): 
   
     # Default Case 
     if root is None: 
         return False
   
-    # Store this node in path vector. The node will be 
-    # removed if not in path from root to k 
+    # Store this node in path vector. Node will be removed if not in path from root to k 
     path.append(root.key) 
   
     # See if the k is same as root's key 
@@ -28,14 +26,12 @@ def findPath(root, path, k):
             (root.right!= None and findPath(root.right, path, k))): 
         return True 
   
-    # If not present in subtree rooted with root, remove 
-    # root from path and return False 
+    # If not present in subtree rooted with root, remove root from path and return false 
        
     path.pop() 
     return False
   
-# Returns LCA if node n1 and n2 are present in the given 
-# binary tree, otherwise return -1 
+# Returns LCA if node n1 and n2 are present in the given Binary Tree, otherwise returns -1 
 def findLCA(root, n1, n2): 
   
     # To store paths to n1 and n2 from the root 
@@ -43,7 +39,7 @@ def findLCA(root, n1, n2):
     path2 = [] 
   
     # Find paths from root to n1 and root to n2. 
-    # If either n1 or n2 is not present, return -1.  
+    # If either n1 or n2 is not present, returns -1.  
     if (not findPath(root, path1, n1) or not findPath(root, path2, n2)): 
         return -1 
   
@@ -63,7 +59,7 @@ root.left.right = Node(5)
 root.right.left = Node(6) 
 root.right.right = Node(7) 
   
-print('LCA(4,5) = ' , findLCA(root, 4, 5))
+print('LCA(3,7) = ' , findLCA(root, 3, 7))
 print('LCA(4,6) = ' , findLCA(root, 4, 6))
-print('LCA(3,4) = ' , findLCA(root, 3, 4))
-print('LCA(2,4) = ' , findLCA(root, 2, 4))
+print('LCA(2,5) = ' , findLCA(root, 2, 5))
+print('LCA(1,2) = ' , findLCA(root, 1, 2))

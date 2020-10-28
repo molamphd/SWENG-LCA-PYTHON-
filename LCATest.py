@@ -11,7 +11,7 @@ class TestLCA(unittest.TestCase):
      root.left.right = Node(5) 
      root.right.left = Node(6) 
      root.right.right = Node(7) 
-     self.assertEqual(findLCA(root, 4, 5), 2)
+     self.assertEqual(findLCA(root, 3, 7), 3)
 
     def testLCA2(self):
      root = Node(1) 
@@ -31,7 +31,7 @@ class TestLCA(unittest.TestCase):
      root.left.right = Node(5) 
      root.right.left = Node(6) 
      root.right.right = Node(7) 
-     self.assertEqual(findLCA(root, 3, 4), 1)
+     self.assertEqual(findLCA(root, 2, 5), 2)
 
     def testLCA4(self):
      root = Node(1) 
@@ -41,7 +41,7 @@ class TestLCA(unittest.TestCase):
      root.left.right = Node(5) 
      root.right.left = Node(6) 
      root.right.right = Node(7) 
-     self.assertEqual(findLCA(root, 2, 4), 2)
+     self.assertEqual(findLCA(root, 1, 2), 1)
 
 
 if __name__ == '__main__':
